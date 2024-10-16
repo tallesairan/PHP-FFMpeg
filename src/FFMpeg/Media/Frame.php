@@ -99,11 +99,13 @@ class Frame extends AbstractMediaType
                 '-y', '-ss', (string) $this->timecode,
                 '-i', $this->pathfile,
                 '-vframes', '1',
+                '-pix_fmt','yuv420p',
                 '-f', $outputFormat,
             ];
         } else {
             $commands = [
                 '-y', '-i', $this->pathfile,
+                '-pix_fmt','yuv420p',
                 '-vframes', '1', '-ss', (string) $this->timecode,
                 '-f', $outputFormat,
             ];
